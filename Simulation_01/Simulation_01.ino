@@ -1,22 +1,19 @@
-#include <BlynkSimpleStream.h>
+#include <BlynkSimpleStream.h> // Library of Stream Blynk
 
-// Pin Assignment
 
-//Your app authentication token (can be fetched from your blynk app
-char auth[] = "P1yG69YN4AxEwYFfeSuqYAw7j7RmJDVH";//Enter blynk auth token
+char auth[] = "P1yG69YN4AxEwYFfeSuqYAw7j7RmJDVH"; //BLynk auth code 
 
 
 void setup()
 {
 
-  // Blynk will work through Serial
 
-  Serial.begin(9600);
-  Blynk.begin(Serial, auth);
+
+  Serial.begin(9600); // Serial key  
+  Blynk.begin(Serial, auth); // Input for Blynk inticalization. 
 }
 
 void loop()
-{
-  // All the magic is here
-  Blynk.run();
+
+  Blynk.run(); // Running Blynk in a infinite loop
 }
